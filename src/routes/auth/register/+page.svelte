@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+	import { enhance } from '$app/forms';
 	import AuthLayout from '$lib/components/layouts/AuthLayout.svelte';
 	import Label from '$lib/components/form/Label.svelte';
 	import Input from '$lib/components/form/Input.svelte';
@@ -12,7 +13,7 @@
 <AuthLayout>
 	{#snippet title()}Register{/snippet}
 
-	<form action="#" method="POST" class="space-y-6">
+	<form method="POST" class="space-y-6" use:enhance>
 		<div>
 			<Label input="email">Email</Label>
 			<div class="mt-2">
